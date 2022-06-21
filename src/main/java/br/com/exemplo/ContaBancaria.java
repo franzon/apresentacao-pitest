@@ -16,7 +16,7 @@ public class ContaBancaria {
     public String sacar(BigDecimal valorSaque) {
         if (saldo.compareTo(valorSaque) >= 0) {
             saldo = saldo.subtract(valorSaque);
-            servicoFakeDeEmail.enviarComprovante(String.format("Saque de R$ %s realizado com sucesso.", valorSaque));
+            servicoFakeDeEmail.enviarComprovante("Saque realizado com sucesso!");
             return "SUCESSO";
         }
 

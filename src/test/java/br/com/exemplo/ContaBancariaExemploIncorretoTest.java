@@ -34,4 +34,26 @@ class ContaBancariaExemploIncorretoTest {
 
         assertEquals(contaBancaria.getSaldo(), new BigDecimal(1000));
     }
+
+//    @Test
+//    void deveSubtrairOSaldoSeTiverSaldoSuficiente() {
+//        ContaBancaria contaBancaria = new ContaBancaria(new ServicoFakeDeEmail(), BigDecimal.valueOf(1000));
+//
+//        contaBancaria.sacar(BigDecimal.valueOf(1000));
+//
+//        assertEquals(contaBancaria.getSaldo(), new BigDecimal(0));
+//    }
+
+//    @Test
+//    void deveEnviarComprovantePorEmailSeConseguirSacar() {
+//        ServicoFakeDeEmail mockEmail = mock(ServicoFakeDeEmail.class);
+//        doNothing().when(mockEmail).enviarComprovante(anyString());
+//
+//        ContaBancaria contaBancaria = new ContaBancaria(mockEmail, BigDecimal.valueOf(1000));
+//
+//        contaBancaria.sacar(BigDecimal.valueOf(800));
+//
+//        assertEquals(contaBancaria.getSaldo(), new BigDecimal(200));
+//        verify(mockEmail).enviarComprovante(anyString());
+//    }
 }
